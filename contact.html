@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • Beau Roundy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">BR</a>
+    <nav class="site-nav">
+      <a href="index.html#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#dashboards">Dashboards</a>
+      <a class="active" href="contact.html">Contact</a>
+      <button id="themeToggle" aria-label="Toggle theme">◐</button>
+    </nav>
+  </header>
+
+  <main class="section narrow">
+    <h1>Contact</h1>
+    <p>Want to collaborate or have a project in mind? Reach out below.</p>
+
+    <form id="contactForm" class="contact-form" onsubmit="return submitContact(this)">
+      <label>
+        Name
+        <input name="name" type="text" placeholder="Your name" required />
+      </label>
+      <label>
+        Email
+        <input name="email" type="email" placeholder="you@example.com" required />
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="6" placeholder="How can I help?" required></textarea>
+      </label>
+      <div class="form-actions">
+        <button class="btn primary" type="submit">Send</button>
+        <a class="btn outline" href="mailto:beau.roundy@jobnimbus.com">Email directly</a>
+      </div>
+      <p id="contactNote" class="muted small">This form opens your email client with a prefilled message.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Beau Roundy • <a href="contact.html">Contact</a></p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

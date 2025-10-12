@@ -1,24 +1,128 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Beau Roundy</title>
-      
-      <style>                                  
-              #frame { 
-                  margin: auto;
-                  width: 950px; 
-                  height: 975px; 
-                  resize: both; 
-              } 
-           </style> 
-      
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Beau Roundy — API & automation specialist. Data, MCP, and modern web." />
+  <meta property="og:title" content="Beau Roundy" />
+  <meta property="og:description" content="API + Automations • MCP • Data Dashboards" />
+  <meta property="og:type" content="website" />
+  <title>Beau Roundy • API + Automations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body> <!-- bgcolor="aqua"> 
-<h1>Hello World</h1>
-<p>My name is Beau Roundy. </p>
--->
-      
-      <iframe id="frame" height ="100%" width="100%" style="border:3px solid black;" src="Current_Resume.pdf#toolbar=0"></iframe>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">BR</a>
+    <nav class="site-nav">
+      <a href="#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="#dashboards">Dashboards</a>
+      <a href="contact.html">Contact</a>
+      <button id="themeToggle" aria-label="Toggle theme">◐</button>
+    </nav>
+  </header>
 
+  <main id="home">
+    <section class="hero section">
+      <div class="flame-wrap" aria-hidden="true">
+        <!-- Simple, performant SVG flame with CSS-driven flicker -->
+        <svg class="flame" viewBox="0 0 200 260" role="img" aria-label="Animated flame">
+          <defs>
+            <radialGradient id="flameGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="var(--primary-200)" />
+              <stop offset="60%" stop-color="var(--primary-400)" />
+              <stop offset="100%" stop-color="var(--accent-600)" />
+            </radialGradient>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="8" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <path id="flame-shape" filter="url(#glow)" fill="url(#flameGrad)" d="
+            M100,250
+            C60,240 40,210 45,180
+            C50,150 80,140 85,110
+            C90,80 75,60 90,40
+            C105,20 125,35 130,60
+            C135,85 120,110 125,140
+            C130,170 160,185 155,210
+            C150,235 130,246 100,250 Z">
+          </path>
+        </svg>
+      </div>
+      <div class="hero-text reveal">
+        <h1>API + Automations</h1>
+        <p>Connecting systems, crafting workflows, and building data-driven experiences.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="about.html">About me</a>
+          <a class="btn outline" href="#dashboards">See dashboards</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="intro" class="section reveal">
+      <h2>What I do</h2>
+      <p>
+        I design and support API-based automations, connect CRMs and services, and build lightweight data dashboards.
+        Exploring MCP servers and practical ML to augment automation.
+      </p>
+      <ul class="pill-list">
+        <li>API Integrations</li>
+        <li>Zapier / Make / n8n</li>
+        <li>MCP & Local AI</li>
+        <li>Business Intelligence</li>
+        <li>Predictive Prototyping</li>
+      </ul>
+    </section>
+
+    <section id="dashboards" class="section">
+      <h2 class="reveal">Data Dashboards</h2>
+      <p class="muted reveal">Embeddable panels you can replace later with your own D3/Observable visualizations.</p>
+
+      <!-- Example embed: ObservableHQ GeoTIFF Contours II -->
+      <article class="panel reveal">
+        <header>
+          <h3>GeoTIFF Contours II (Observable)</h3>
+          <p class="muted small">Embedded from Observable — interactive map of global temperature contours.</p>
+        </header>
+        <div class="embed-wrap">
+          <iframe
+            title="GeoTIFF Contours II"
+            loading="lazy"
+            class="observable-embed"
+            src="https://observablehq.com/embed/@d3/geotiff-contours-ii?cells=chart"
+            width="100%"
+            height="600"
+            frameborder="0"></iframe>
+        </div>
+        <footer class="panel-footer">
+          <a class="link" href="https://observablehq.com/@d3/geotiff-contours-ii" target="_blank" rel="noopener">Open on Observable</a>
+        </footer>
+      </article>
+
+      <!-- Placeholder panels to be filled later -->
+      <article class="panel placeholder reveal">
+        <header><h3>Dashboard Placeholder A</h3></header>
+        <div class="placeholder-body">Drop in a D3 chart here (e.g., bar chart, map, or time series).</div>
+      </article>
+
+      <article class="panel placeholder reveal">
+        <header><h3>Dashboard Placeholder B</h3></header>
+        <div class="placeholder-body">Another spot for a future visualization or KPI tiles.</div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Beau Roundy • <a href="contact.html">Contact</a></p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
